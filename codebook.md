@@ -1,0 +1,124 @@
+# Variable Codebook
+
+## Demographic and Background Variables
+
+| Variable Name | Description |
+|---------------|-------------|
+| country | Country of respondent |
+| sector | Industry sector of respondent |
+| gender | Gender of respondent |
+| age | Age category of respondent |
+| prep_level | Preparation level (continuous measure) |
+| qual_reasons | Qualitative reasons for responses |
+
+## Personality Variables
+
+| Variable Name | Description |
+|---------------|-------------|
+| pers_extraverted_enthusiastic | Personality trait: Extraverted, enthusiastic |
+| pers_critical_quarrelsome | Personality trait: Critical, quarrelsome |
+| pers_dependable_self-disciplined | Personality trait: Dependable, self-disciplined |
+| pers_anxious_easily_upset | Personality trait: Anxious, easily upset |
+| pers_open_to_new_experiences_complex | Personality trait: Open to new experiences, complex |
+| pers_sympathetic_warm | Personality trait: Sympathetic, warm |
+| pers_disorganized_careless | Personality trait: Disorganized, careless |
+| pers_reserved_quiet | Personality trait: Reserved, quiet |
+| pers_calm_emotionally_stable | Personality trait: Calm, emotionally stable |
+| pers_conventional_uncreative | Personality trait: Conventional, uncreative |
+
+## Emotional and Workplace Variables
+
+### Emotional Statements - Fast Choice (es_*)
+
+| Variable Name | Group | Subgroup | Statement |
+|---------------|-------|----------|-----------|
+| es_fgen | Emotional | General | I'm ready for my next step |
+| es_ftra_des | Emotional | Transformation | I want a new start |
+| es_ftra_aut | Emotional | Transformation | I've got freedom to change |
+| es_fcnt_com | Emotional | Containers | I'm comfortable where I am |
+| es_fcnt_psy | Emotional | Containers | I feel like my voice is heard |
+| es_fcon_soc | Emotional | Connection | Others influence my decisions |
+| es_fbal_anx | Emotional | Balance | I'm anxious about change |
+| es_fres_fin | Emotional | Resources | I'm financially motivated |
+| es_fcont_imp | Emotional | Control | I believe in myself |
+| es_fjou_opt | Emotional | Journey | I'm optimistic about the future |
+| es_fcon_inc | Emotional | Connection | I feel included |
+| es_fbal_sat | Emotional | Balance | I'm happy where I am |
+| es_fres_ski | Emotional | Resources | I've got the skills to progress |
+| es_fcont_con | Emotional | Control | I control my next step |
+| es_fjou_pro | Emotional | Journey | I've set myself goals |
+
+### Emotional Statements - Likert Scale (el_*)
+
+| Variable Name | Group | Subgroup | Statement |
+|---------------|-------|----------|-----------|
+| el_lgen | Emotional | General | I'm ready for my next step |
+| el_ltra_des | Emotional | Transformation | I want a new start |
+| el_ltra_aut | Emotional | Transformation | I've got freedom to change |
+| el_lcnt_com | Emotional | Containers | I'm comfortable where I am |
+| el_lcnt_psy | Emotional | Containers | I feel like my voice is heard |
+| el_lcon_soc | Emotional | Connection | Others influence my decisions |
+| el_lbal_anx | Emotional | Balance | I'm anxious about change |
+| el_lres_fin | Emotional | Resources | I'm financially motivated |
+| el_lcont_imp | Emotional | Control | I believe in myself |
+| el_ljou_opt | Emotional | Journey | I'm optimistic about the future |
+| el_lcon_inc | Emotional | Connection | I feel included |
+| el_lbal_sat | Emotional | Balance | I'm happy where I am |
+| el_lres_ski | Emotional | Resources | I've got the skills to progress |
+| el_lcont_con | Emotional | Control | I control my next step |
+| el_ljou_pro | Emotional | Journey | I've set myself goals |
+
+### Workplace/Functional Statements - Fast Choice (wfs_*)
+
+| Variable Name | Group | Subgroup | Statement |
+|---------------|-------|----------|-----------|
+| wfs_fuse_skills | Workplace/functional | Lack of opportunity to use skills/abilities | I can use my skills |
+| wfs_flearn_dev | Workplace/functional | Learning and development | I have opportunities to learn |
+| wfs_fcarprom | Workplace/functional | Career advancement and promotions | I can grow here |
+| wfs_fmean_full | Workplace/functional | Meaning | I find my job meaningful |
+| wfs_fpoorman | Workplace/functional | Poor management | My manager is poor |
+| wfs_ftoxic | Workplace/functional | Toxic workplace/Company culture | The work culture is toxic |
+| wfs_fexcess_wk | Workplace/functional | Excessive or too little work | I'm working too hard |
+| wfs_fcollea | Workplace/functional | Disagreement or fall out with colleagues | I don't get along with my colleagues |
+| wfs_fwellcomp | Workplace/functional | A better salary and financial stability | I'm well compensated |
+| wfs_ffin_fair | Workplace/functional | Financial fairness | My salary is unfair compared to colleagues |
+| wfs_fenjhyb | Workplace/functional | Satisfaction around hybrid working | I enjoy hybrid working |
+
+### Workplace/Functional Statements - Likert Scale (wfl_*)
+
+| Variable Name | Group | Subgroup | Statement |
+|---------------|-------|----------|-----------|
+| wfl_luse_skills | Workplace/functional | Lack of opportunity to use skills/abilities | I can use my skills |
+| wfl_llearn_dev | Workplace/functional | Learning and development | I have opportunities to learn |
+| wfl_lcarprom_d | Workplace/functional | Career advancement and promotions | I can grow here |
+| wfl_lmean_full | Workplace/functional | Meaning | I find my job meaningful |
+| wfl_lpoorman | Workplace/functional | Poor management | My manager is poor |
+| wfl_ltoxic | Workplace/functional | Toxic workplace/Company culture | The work culture is toxic |
+| wfl_lexcess_wk | Workplace/functional | Excessive or too little work | I'm working too hard |
+| wfl_lcollea | Workplace/functional | Disagreement or fall out with colleagues | I don't get along with my colleagues |
+| wfl_lwellcomp | Workplace/functional | A better salary and financial stability | I'm well compensated |
+| wfl_lfin_lair | Workplace/functional | Financial fairness | My salary is unfair compared to colleagues |
+| wfl_lenjhyb | Workplace/functional | Satisfaction around hybrid working | I enjoy hybrid working |
+
+## Variable Type Information
+
+- **Fast Choice variables (es_*, wfs_*)**: Float64/Float32 - Continuous measures from fast choice responses
+- **Likert variables (el_*, wfl_*)**: Integer/Category - Likert scale responses  
+- **Personality variables (pers_*)**: Category - Categorical personality trait measures
+- **Demographics**: Mixed types (object, category, float32)
+
+## Country and Sector Codes
+
+### Country Codes
+- FR: France
+- DE: DACH (Germany and Switzerland)  
+- SP: Spain
+- US: USA
+- IT: Italy
+- UK: United Kingdom
+
+### Sector Codes
+- Fin: Financial Services
+- Tech: Technology
+- Pharma: Pharmaceutical
+- Energy: Energy
