@@ -103,8 +103,8 @@
 ## Variable Type Information
 
 - **Fast Choice variables (es_*, wfs_*)**: Float64/Float32 - Continuous measures from fast choice responses
-- **Likert variables (el_*, wfl_*)**: Integer/Category - Likert scale responses  
-- **Personality variables (pers_*)**: Category - Categorical personality trait measures
+- **Likert variables (el_*, wfl_*)**: Integer - Likert scale responses  
+- **Personality variables (pers_*)**: Integer - Categorical personality trait measures
 - **Demographics**: Mixed types (object, category, float32)
 
 ## Country and Sector Codes
