@@ -122,3 +122,95 @@
 - Tech: Technology
 - Pharma: Pharmaceutical
 - Energy: Energy
+
+## Variable Ranges/ Discrete Values
+
+### Scaling Differences by Variable Domain
+
+The survey employs different scaling systems based on the construct domain being measured: **Emotional** versus **Workplace/Functional** variables. This distinction applies consistently across both response modalities (fast choice and Likert scales).
+
+### Emotional Variables - Bipolar Scaling
+
+Emotional constructs use bipolar scales that allow for both positive and negative orientations relative to a neutral midpoint.
+
+#### Emotional Fast Choice Variables (es_*)
+- **Scale Type**: Bipolar continuous scale
+- **Range**: -100 to +100 (in practice we never see exactly -100 or +100)
+- **Midpoint**: 0 (neutral)
+- **Variable Count**: 15 variables
+- **Interpretation**: 
+  - Negative values = Disagreement/Opposition
+  - Zero = Neutral/Indifferent
+  - Positive values = Agreement/Alignment
+
+**Variables and Observed Ranges:**
+- es_fbal_anx: -94.44 to 98.89
+- es_fbal_sat: -96.67 to 98.89
+- es_fcnt_com: -98.89 to 97.78
+- es_fcnt_psy: -97.22 to 98.89
+- es_fcon_inc: -98.89 to 97.78
+- es_fcon_soc: -98.89 to 97.78
+- es_fcont_con: -96.67 to 97.78
+- es_fcont_imp: -98.89 to 98.89
+- es_fgen: -96.67 to 98.89
+- es_fjou_opt: -96.67 to 96.67
+- es_fjou_pro: -98.89 to 96.67
+- es_fres_fin: -98.89 to 98.89
+- es_fres_ski: -98.89 to 98.89
+- es_ftra_aut: -96.11 to 98.89
+- es_ftra_des: -98.89 to 98.89
+
+#### Emotional Likert Variables (el_*)
+- **Scale Type**: Bipolar ordinal scale
+- **Range**: -100 to +100
+- **Scale Points**: 9 discrete values (-100, -75, -50, -25, 0, 25, 50, 75, 100)
+- **Variable Count**: 15 variables
+- **Interpretation**: Same as fast choice emotional variables
+
+**All el_* variables use the full -100 to +100 range with 9 scale points.**
+
+### Workplace/Functional Variables - Unipolar Scaling
+
+Workplace/functional constructs use unipolar scales that measure intensity of agreement from zero (strong disagreement) to maximum (strong agreement).
+
+#### Workplace/Functional Fast Choice Variables (wfs_*)
+- **Scale Type**: Unipolar continuous scale
+- **Range**: 0.0 to 100.0
+- **Minimum**: 0 (strongest disagreement)
+- **Maximum**: 100 (strongest agreement)
+- **Variable Count**: 11 variables
+- **Interpretation**: 
+  - 0 = Strong disagreement
+  - 100 = Strong agreement
+  - No negative values possible
+
+**Variables and Observed Ranges:**
+- wfs_fcarprom: 0.0 to 100.0
+- wfs_fcollea: 0.0 to 100.0
+- wfs_fenjhyb: 0.0 to 100.0
+- wfs_fexcess_wk: 0.0 to 100.0
+- wfs_ffin_fair: 0.0 to 100.0
+- wfs_flearn_dev: 0.0 to 100.0
+- wfs_fmean_full: 0.0 to 100.0
+- wfs_fpoorman: 0.0 to 100.0
+- wfs_ftoxic: 0.0 to 100.0
+- wfs_fuse_skills: 0.0 to 100.0
+- wfs_fwellcomp: 0.0 to 100.0
+
+#### Workplace/Functional Likert Variables (wfl_*)
+- **Scale Type**: Unipolar ordinal scale
+- **Range**: 0 to 100
+- **Scale Points**: 5 discrete values (0, 25, 50, 75, 100)
+- **Variable Count**: 11 variables
+- **Interpretation**: Same as fast choice workplace/functional variables
+
+**All wfl_* variables use the full 0 to 100 range with 5 scale points.**
+
+### Summary of Scale Ranges by Response Type
+
+| Variable Group | Response Type | Scale Type | Range | Scale Points |
+|----------------|---------------|------------|-------|--------------|
+| Emotional (es_*) | Fast Choice | Bipolar Continuous | -100 to +100 | Continuous |
+| Emotional (el_*) | Likert | Bipolar Ordinal | -100 to +100 | 9 points |
+| Workplace (wfs_*) | Fast Choice | Unipolar Continuous | 0 to 100 | Continuous |
+| Workplace (wfl_*) | Likert | Unipolar Ordinal | 0 to 100 | 5 points |
