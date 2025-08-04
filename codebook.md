@@ -100,6 +100,10 @@
 | wfl_lfin_lair | Workplace/functional | Financial fairness | My salary is unfair compared to colleagues |
 | wfl_lenjhyb | Workplace/functional | Satisfaction around hybrid working | I enjoy hybrid working |
 
+## Presentation order
+Assume the questions were presented firstly any demograhpic/screener type questions including personality test, then the implicit/explicit (these were counterbalanced across participants, and statements within these blocks were presented in random order)
+
+
 ## Variable Type Information
 
 - **Fast Choice variables (es_*, wfs_*)**: Float64/Float32 - Continuous measures from fast choice responses
