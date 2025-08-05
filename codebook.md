@@ -8,7 +8,7 @@
 | sector | Industry sector of respondent |
 | gender | Gender of respondent |
 | age | Age category of respondent |
-| prep_level | Preparation level (continuous measure) |
+| prep_level | Career Preparedness Index (0-10)|
 | qual_reasons | Qualitative reasons for responses |
 
 ## Personality Variables
@@ -101,7 +101,9 @@
 | wfl_lenjhyb | Workplace/functional | Satisfaction around hybrid working | I enjoy hybrid working |
 
 ## Presentation order
-Assume the questions were presented firstly any demograhpic/screener type questions including personality test, then the implicit/explicit (these were counterbalanced across participants, and statements within these blocks were presented in random order)
+Assume the questions were presented firstly any demograhpic/screener type questions including personality test, then the implicit/explicit (these were counterbalanced across participants, and statements within these blocks were presented in random order).
+
+Our key dependent variable is our preparedness index.
 
 
 ## Variable Type Information

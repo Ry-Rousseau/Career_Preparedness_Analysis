@@ -1,0 +1,117 @@
+---
+title: "modelling_preparedness"
+output: html_document
+date: "2025-08-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Load necessary libraries
+library(tidyverse)
+
+# Load the data
+data <- read.csv("../data/survey_data_cleaned.csv")
+
+# Glimpse the data
+glimpse(data)
+
+```
+
+### Identifying the global drivers
+
+Global drivers are the factors that influence the preparedness of the sample across different regions, age-groups, sectors. In our predictive model, we want to control for these.
+
+Our best choice of model is a linear regression given our continuous outcome variable (preparedness score). We will use the `lm()` function in R to fit the model.
+
+```{r}
+library(tidyverse)
+library(broom)
+library(stargazer)
+library(car)
+
+# LIKERT MODEL
+model_likert <- data %>%
+    select(prep_level, starts_with("el_"), starts_with("wfl_"), 
+         age, country_sector) %>%
+  # Emotional: -100 to +100 with 9 points → 1 to 9
+  mutate(across(starts_with("el_"), ~(.x + 100)/25 + 1)) %>% 
+
+# Workplace: 0 to 100 with 5 points → 1 to 5  
+  mutate(across(starts_with("wfl_"), ~.x/25 + 1)) %>% 
+  drop_na() %>%
+  lm(prep_level ~ ., data = .)
+
+# FAST CHOICE MODEL  
+model_fast <- data %>%
+  select(prep_level, starts_with("es_"), starts_with("wfs_"), 
+         age, country_sector) %>%
+  mutate(across(starts_with("es_"), ~.x/100)) %>%
+  mutate(across(starts_with("wfs_"), ~.x/100)) %>%
+  drop_na() %>%
+  lm(prep_level ~ ., data = .)
+
+summary(model_likert)
+# 
+summary(model_fast)
+
+stargazer(model_likert, model_fast, type = "text", 
+          title = "Preparedness Models", 
+          dep.var.labels = "Preparedness Score",
+          covariate.labels = c("Emergency Literacy", "Workforce Literacy", 
+                               "Age", "Sector", "Country"),
+          model.names = FALSE, 
+          omit.stat = c("f", "ser"))
+```
+
+```{r}
+# REFERENCE CATEGORIES
+cat("=== REFERENCE CATEGORIES ===\n")
+cat("Age: 18-24\n")
+cat("Country Sector: DE (German) Energy\n") 
+
+# MULTICOLLINEARITY
+cat("\n=== MULTICOLLINEARITY (VIF > 5 indicates problem) ===\n")
+cat("LIKERT MODEL:\n")
+vif_likert <- vif(model_likert)
+vif_likert[vif_likert > 5] %>% sort(decreasing = TRUE)
+
+cat("\nFAST CHOICE MODEL:\n")
+vif_fast <- vif(model_fast)
+vif_fast[vif_fast > 5] %>% sort(decreasing = TRUE)
+
+# MODEL FIT COMPARISON
+cat("\n=== MODEL FIT ===\n")
+cat("Likert R²:", summary(model_likert)$r.squared %>% round(3), 
+    "| Adj R²:", summary(model_likert)$adj.r.squared %>% round(3), "\n")
+cat("Fast Choice R²:", summary(model_fast)$r.squared %>% round(3),
+    "| Adj R²:", summary(model_fast)$adj.r.squared %>% round(3), "\n")
+
+# TOP PREDICTORS (significant only)
+cat("\n=== TOP SIGNIFICANT PREDICTORS ===\n")
+cat("LIKERT:\n")
+tidy(model_likert) %>%
+  filter(p.value < 0.05, term != "(Intercept)") %>%
+  arrange(p.value) %>%
+  select(term, estimate, p.value) %>%
+  head(8) %>%
+  print()
+
+cat("\nFAST CHOICE:\n")
+tidy(model_fast) %>%
+  filter(p.value < 0.05, term != "(Intercept)") %>%
+  arrange(p.value) %>%
+  select(term, estimate, p.value) %>%
+  head(8) %>%
+  print()
+
+
+```
+
+
+
+
+
+
