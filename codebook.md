@@ -1,5 +1,41 @@
 # Variable Codebook
 
+## Data Processing and Scale Transformations
+
+**IMPORTANT:** All predictor variables have been transformed from their original scales to standardized scales for consistent interpretation across analyses. These transformations are applied in the `data_cleaning.ipynb` notebook.
+
+### Original vs. Transformed Scales
+
+#### Emotional Likert Variables (el_*)
+- **Original Scale**: -100 to +100 (9 response points: -100, -75, -50, -25, 0, 25, 50, 75, 100)
+- **Transformed Scale**: 1 to 9
+- **Transformation Formula**: `(original_value + 100) / 25 + 1`
+- **Rationale**: Creates intuitive 1-9 scale for easier coefficient interpretation
+
+#### Workplace/Functional Likert Variables (wfl_*)
+- **Original Scale**: 0 to 100 (5 response points: 0, 25, 50, 75, 100)
+- **Transformed Scale**: 1 to 5
+- **Transformation Formula**: `original_value / 25 + 1`
+- **Rationale**: Matches typical 5-point Likert scale interpretation
+
+#### Emotional Fast Choice Variables (es_*)
+- **Original Scale**: Approximately -100 to +100 (implicit continuous scores)
+- **Transformed Scale**: -1 to +1
+- **Transformation Formula**: `original_value / 100`
+- **Rationale**: Normalized scale maintaining bipolar nature around zero
+
+#### Workplace/Functional Fast Choice Variables (wfs_*)
+- **Original Scale**: Approximately 0 to 100 (implicit continuous scores)  
+- **Transformed Scale**: 0 to 1
+- **Transformation Formula**: `original_value / 100`
+- **Rationale**: Normalized proportion scale for unipolar constructs
+
+All data files and analyses use the **transformed scales** unless explicitly noted otherwise.
+
+## Dataset Summary Statistics
+
+### Sample Size by Country-Sector Batch
+
 ## Demographic and Background Variables
 
 | Variable Name | Description |
