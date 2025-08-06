@@ -12,7 +12,7 @@ This project analyzes primary research data assessing behavioral science-informe
 ## Data Structure
 
 - **Sample size**: 4,211 respondents across 6 global regions
-- **Variables**: 97 total variables including demographics, personality traits, and preparedness measures
+- **Variables**: 97 total variables including demographics, personality traits, and latent factors. Some preparedness measures were constructed, but these were deprecated.
 - **Regions**: France, DACH (Germany/Switzerland), Spain, USA, Italy, United Kingdom
 - **Sectors**: Financial Services, Technology, Pharmaceutical, Energy
 
@@ -43,7 +43,7 @@ This project analyzes primary research data assessing behavioral science-informe
 - **Cross-Cultural Validation**: Country-level model comparison
 - **Behavioral Segmentation**: Identifying distinct audience profiles
 
-## Key Deliverables
+## Key Outcomes
 
 1. Global driver identification and comparison (implicit vs explicit)
 2. Country-level factor importance analysis
