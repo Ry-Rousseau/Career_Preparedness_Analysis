@@ -220,3 +220,63 @@ Workplace/functional constructs use unipolar scales that measure intensity of ag
 | Emotional (el_*) | Likert | Bipolar Ordinal | -100 to +100 | 9 points |
 | Workplace (wfs_*) | Fast Choice | Unipolar Continuous | 0 to 100 | Continuous |
 | Workplace (wfl_*) | Likert | Unipolar Ordinal | 0 to 100 | 5 points |
+
+## Factor Analysis Variables
+
+Factor analysis was performed to identify underlying latent constructs from the survey responses. The following factor variables were created through dimensional reduction:
+
+### Combined Factor Variables
+
+| Variable Name | Description |
+|---------------|-------------|
+| combined_factor_1 | Primary combined factor from all survey items |
+| combined_factor_2 | Secondary combined factor from all survey items |
+| combined_factor_3 | Tertiary combined factor from all survey items |
+| combined_factor_4 | Fourth combined factor from all survey items |
+| combined_factor_5 | Fifth combined factor from all survey items |
+
+### Fast Choice Factor Variables
+
+| Variable Name | Description |
+|---------------|-------------|
+| fast_factor_1 | Primary factor from fast choice (implicit) responses |
+| fast_factor_2 | Secondary factor from fast choice (implicit) responses |
+| fast_factor_3 | Tertiary factor from fast choice (implicit) responses |
+| fast_factor_4 | Fourth factor from fast choice (implicit) responses |
+
+### Likert Factor Variables
+
+| Variable Name | Description |
+|---------------|-------------|
+| likert_factor_1 | Primary factor from Likert (explicit) responses |
+| likert_factor_2 | Secondary factor from Likert (explicit) responses |
+| likert_factor_3 | Tertiary factor from Likert (explicit) responses |
+| likert_factor_4 | Fourth factor from Likert (explicit) responses |
+
+### Emotional Factor Variables
+
+| Variable Name | Description |
+|---------------|-------------|
+| emotional_factor_1 | Primary factor from emotional constructs |
+| emotional_factor_2 | Secondary factor from emotional constructs |
+| emotional_factor_3 | Tertiary factor from emotional constructs |
+| emotional_factor_4 | Fourth factor from emotional constructs |
+
+### Workplace Factor Variables
+
+| Variable Name | Description |
+|---------------|-------------|
+| workplace_factor_1 | Primary factor from workplace/functional constructs |
+| workplace_factor_2 | Secondary factor from workplace/functional constructs |
+| workplace_factor_3 | Tertiary factor from workplace/functional constructs |
+| workplace_factor_4 | Fourth factor from workplace/functional constructs |
+
+### Personality Factor Variables
+
+| Variable Name | Description |
+|---------------|-------------|
+| personality_factor_1 | Primary factor from personality trait variables |
+| personality_factor_2 | Secondary factor from personality trait variables |
+| personality_factor_3 | Tertiary factor from personality trait variables |
+
+**Note**: All factor variables are standardized with mean = 0 and standard deviation = 1. Higher values indicate stronger association with the underlying latent construct represented by that factor.
